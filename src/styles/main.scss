@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+
+$main-bg-color: #f1f2f0;
+$accent-blue: #37bbe4;
+$accent-gray: #e1e0dd;
+$accent-black: #35342f;
+$accent-orange: #ec6b2d;
+$accent-red: #dd6464;
+
+body {
+  box-sizing: border-box;
+  background-color: $main-bg-color;
+  color: $accent-black;
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: $accent-blue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main-app-container {
+  padding-top: 2em;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.main-app-nav {
+  font-size: 20px;
+  text-align: center;
+}
+
+.input-search {
+  border: 1px solid $accent-gray;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+}
+
+.user {
+  border: 1px solid $accent-gray;
+  border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.10);
+  margin-top: 20px;
+  display: flex;
+}
+
+.user-avatar {
+  padding-right: 10px;
+}
+
+.user-image {
+  max-width: 75px;
+}
