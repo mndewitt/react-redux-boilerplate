@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+
+body {
+  box-sizing: border-box;
+  background-color: $main-bg-color;
+  color: $accent-black;
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: $accent-blue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main-app-container {
+  padding-top: 2em;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.main-app-nav {
+  font-size: 20px;
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Results from '../../src/components/results';
+import Results from '../../src/components/results/results';
 
 describe('[Component] Results', () => {
     it('should render the right number of users', () => {

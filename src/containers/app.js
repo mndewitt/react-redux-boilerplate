@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as SearchActions from '../actions/search-actions';
-import Results from '../components/results';
-import Search from '../components/search';
+import Results from '../components/results/results';
+import Search from '../components/search/search';
 
 export default class App extends Component {
     render() {
