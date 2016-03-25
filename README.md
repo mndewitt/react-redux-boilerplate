@@ -1,6 +1,6 @@
 # Simple React/Redux starter
 
-Boilerplate with React, Redux, ES2015, ESLint, Karma, Enzyme, and Webpack. Based on simple-react-redux-boilerplate.
+Boilerplate with React, Redux, React-Router, ES2015, ESLint, Karma, Enzyme, and Webpack. Based on simple-react-redux-boilerplate.
 
 ##Installation
 

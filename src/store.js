@@ -1,14 +1,14 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import rootReducer from './reducers';
+import rootReducer from './reducers/index.js';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
-import DevTools from './containers/dev-tools';
+import identity from 'lodash/identity';
 
 const logger = createLogger();
 
 const finalCreateStore = compose(
     applyMiddleware(logger, thunk),
-    DevTools.instrument()
+    window.devToolsExtension ? window.devToolsExtension() : identity
 )(createStore);
 
 export default function configureStore(initialState) {
