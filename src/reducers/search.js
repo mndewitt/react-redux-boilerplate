@@ -13,7 +13,7 @@ reducers[SEARCH] = function search(state, action) {
 };
 
 reducers[SEARCH_FINISHED] = function search(state, action) {
-    return set('results', action.users, state);
+    return set('results', action.teams, state);
 };
 
 export default function reducer(state = initialState, action) {

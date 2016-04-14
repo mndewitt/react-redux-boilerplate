@@ -10,9 +10,9 @@ export default class App extends Component {
         const { results, actions } = this.props;
         return (
             <div className="main-app-container">
-                <div className="main-app-nav">Github user search</div>
+                <div className="main-app-nav">Soccer team search</div>
                 <Search actions={actions}/>
-                <Results users={results}/>
+                <Results teams={results}/>
             </div>
         );
     }

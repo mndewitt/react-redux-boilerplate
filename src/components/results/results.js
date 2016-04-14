@@ -1,6 +1,6 @@
 import React from 'react';
-import User from '../user/user';
+import Team from '../team/team';
 
-export default function Results({ users }) {
-    return <div>{users.map(user => <User user={user} key={user.id} />)}</div>;
+export default function Results({ teams }) {
+    return <div>{teams.map(team => <Team team={team} key={team.id} />)}</div>;
 }

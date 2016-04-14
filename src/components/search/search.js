@@ -1,24 +1,21 @@
 import React, { Component, PropTypes } from 'react';
 import debounce from 'lodash/debounce';
 
-const waitTime = 200;
-
 export default class Search extends Component {
     constructor(props, context) {
         super(props, context);
-        this.search = debounce(this.search.bind(this), waitTime);
     }
-    handleChange(event) {
-        event.persist();
-        this.search(event);
+    searchForTeams() {
+        this.search();
     }
-    search(event) {
-        this.props.actions.searchUsers(event.target.value);
+    search() {
+        this.props.actions.searchTeams();
     }
     render() {
-        const handleChange = this.handleChange.bind(this);
+        const searchForTeams = this.searchForTeams.bind(this);
+        
         return (
-            <input type="text" className="input-search" placeholder="Search for users" onChange={handleChange}/>
+            <button type="text" className="button-search" onClick={searchForTeams}>Get teams</button>
         );
     }
 }

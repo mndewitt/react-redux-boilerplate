@@ -1,16 +1,15 @@
 import { SEARCH, SEARCH_FINISHED } from '../constants/action-types';
-import { searchGithub } from '../api/search-github';
+import { searchEnglishTeams } from '../api/search-teams';
 
-export function searchUsers(searchTerm) {
+export function searchTeams() {
     return dispatch => {
         dispatch({
             type: SEARCH,
-            term: searchTerm
         });
-        searchGithub(searchTerm).then(users => {
+        searchEnglishTeams().then(teams => {
             dispatch({
                 type: SEARCH_FINISHED,
-                users
+                teams
             });
         });
     };
