@@ -2,17 +2,21 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as SearchActions from '../actions/search-actions';
+import * as FixturesActions from '../actions/fixtures-actions';
 import Results from '../components/results/results';
 import Search from '../components/search/search';
 
 export default class App extends Component {
     render() {
-        const { results, actions } = this.props;
+        const { results, searchActions, fixturesActions, fixtures } = this.props;
         return (
             <div className="main-app-container">
                 <div className="main-app-nav">Soccer team search</div>
-                <Search actions={actions}/>
-                <Results teams={results}/>
+                <Search searchActions={searchActions}/>
+                <Results    
+                    teams={results} 
+                    fixtures={fixtures}
+                    fixturesActions={fixturesActions} />
             </div>
         );
     }
@@ -26,13 +30,15 @@ App.propTypes = {
 function mapStateToProps(state) {
     return {
         history: state.search.history,
-        results: state.search.results
+        results: state.search.results,
+        fixtures: state.fixtures.results
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(SearchActions, dispatch)
+        searchActions: bindActionCreators(SearchActions, dispatch),
+        fixturesActions: bindActionCreators(FixturesActions, dispatch)
     };
 }
 

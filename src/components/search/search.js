@@ -5,11 +5,9 @@ export default class Search extends Component {
     constructor(props, context) {
         super(props, context);
     }
+    
     searchForTeams() {
-        this.search();
-    }
-    search() {
-        this.props.actions.searchTeams();
+        this.props.searchActions.searchTeams();
     }
     render() {
         const searchForTeams = this.searchForTeams.bind(this);
@@ -21,5 +19,5 @@ export default class Search extends Component {
 }
 
 Search.propTypes = {
-    actions: PropTypes.object.isRequired
+    searchActions: PropTypes.object.isRequired
 };

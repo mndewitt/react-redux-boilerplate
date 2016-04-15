@@ -1,2 +1,5 @@
 export const SEARCH = 'SEARCH';
 export const SEARCH_FINISHED = 'SEARCH_FINISHED';
+
+export const GET_FIXTURES = 'GET_FIXTURES';
+export const GET_FIXTURES_FINISHED = 'GET_FIXTURES_FINISHED';
