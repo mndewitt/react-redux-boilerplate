@@ -5,6 +5,7 @@ import * as SearchActions from '../actions/search-actions';
 import * as FixturesActions from '../actions/fixtures-actions';
 import Results from '../components/results/results';
 import Search from '../components/search/search';
+import Fixtures from '../components/fixtures/fixtures';
 
 export default class App extends Component {
     render() {
@@ -13,10 +14,8 @@ export default class App extends Component {
             <div className="main-app-container">
                 <div className="main-app-nav">Soccer team search</div>
                 <Search searchActions={searchActions}/>
-                <Results    
-                    teams={results} 
-                    fixtures={fixtures}
-                    fixturesActions={fixturesActions} />
+                <Fixtures fixtures={fixtures} />
+                <Results teams={results} fixturesActions={fixturesActions} />
             </div>
         );
     }
