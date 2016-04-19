@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
-import searchReducer from './search';
-import fixturesReducer from './fixtures';
+import tableReducer from './table';
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
-    search: searchReducer,
-    fixtures: fixturesReducer,
+    table: tableReducer,
     routing: routerReducer
 });
 

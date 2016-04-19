@@ -1,19 +1,19 @@
-import { SEARCH, SEARCH_FINISHED } from '../constants/action-types';
+import { GET_TABLE, GET_TABLE_FINISHED } from '../constants/action-types';
 import set from 'lodash/fp/set';
 
 const initialState = {
-    results: [],
+    standing: [],
     history: []
 };
 
 const reducers = {};
 
-reducers[SEARCH] = function search(state, action) {
+reducers[GET_TABLE] = function search(state, action) {
     return set('history', [action.term, ...state.history], state);
 };
 
-reducers[SEARCH_FINISHED] = function search(state, action) {
-    return set('results', action.teams, state);
+reducers[GET_TABLE_FINISHED] = function search(state, action) {
+    return set('standing', action.standing, state);
 };
 
 export default function reducer(state = initialState, action) {

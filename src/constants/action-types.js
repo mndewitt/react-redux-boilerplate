@@ -1,5 +1,2 @@
-export const SEARCH = 'SEARCH';
-export const SEARCH_FINISHED = 'SEARCH_FINISHED';
-
-export const GET_FIXTURES = 'GET_FIXTURES';
-export const GET_FIXTURES_FINISHED = 'GET_FIXTURES_FINISHED';
+export const GET_TABLE = 'GET_TABLE';
+export const GET_TABLE_FINISHED = 'GET_TABLE_FINISHED';
