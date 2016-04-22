@@ -5,7 +5,11 @@ export default class Team extends Component {
         super(props, context);
     }
     
+   
+    
     render() {
-        return <h3>{this.props.team.teamName}</h3>;
+        const { team, onClick } = this.props;
+        
+        return <h3 className={'team-name ' + (team.isSelected ? 'team-selected' : '')} onClick={onClick}>{team.teamName} - {team.points} pts.</h3>;
     }
 }

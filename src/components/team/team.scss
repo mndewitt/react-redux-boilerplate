@@ -1,0 +1,8 @@
+.team-name {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.team-selected {
+    color: mediumvioletred;
+}

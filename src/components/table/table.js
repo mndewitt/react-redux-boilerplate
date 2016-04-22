@@ -11,6 +11,14 @@ export default class Table extends Component {
     }
     
     render() {
-        return <div>{this.props.standing.map((team, i) => <Team team={team} key={i} />)}</div>;
+        const { standing, onTeamClick } = this.props;
+        
+        return <div>{standing.map((team, i) => 
+                    <Team 
+                        team={team} 
+                        key={i} 
+                        onClick={() => onTeamClick(i)}
+                    />)}
+              </div>;
     }
 }
